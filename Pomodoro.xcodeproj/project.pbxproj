@@ -60,12 +60,12 @@
 			children = (
 				10A6EE492856D33000EBADEB /* AppDelegate.swift */,
 				10A6EE4B2856D33000EBADEB /* SceneDelegate.swift */,
-				10A6EE4F2856D33000EBADEB /* Main.storyboard */,
 				10A6EE5D2856E7D800EBADEB /* TabBarControllerMain.swift */,
+				10A6EE5F2856F1A300EBADEB /* ViewController.swift */,
+				10A6EE4F2856D33000EBADEB /* Main.storyboard */,
 				10A6EE522856D33100EBADEB /* Assets.xcassets */,
 				10A6EE542856D33100EBADEB /* LaunchScreen.storyboard */,
 				10A6EE572856D33100EBADEB /* Info.plist */,
-				10A6EE5F2856F1A300EBADEB /* ViewController.swift */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";

@@ -67,22 +67,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIQ-15-gUi">
-                                <rect key="frame" x="150.5" y="404.5" width="113.5" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIQ-15-gUi">
+                                <rect key="frame" x="149" y="404.5" width="116.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwD-n5-tAY">
+                                <rect key="frame" x="177.5" y="472.5" width="59" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapToggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3G-3s-Gjb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lIQ-15-gUi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DmG-3w-dZG"/>
+                            <constraint firstItem="pwD-n5-tAY" firstAttribute="top" secondItem="lIQ-15-gUi" secondAttribute="bottom" constant="20" id="ana-g3-Pd8"/>
                             <constraint firstItem="lIQ-15-gUi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jQM-b4-Jyq"/>
+                            <constraint firstItem="pwD-n5-tAY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sMe-2o-70v"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="v6m-AW-pqw"/>
                     <navigationItem key="navigationItem" id="XMT-cR-F8J"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="lIQ-15-gUi" id="9Qh-X1-zEU"/>
+                        <outlet property="toggleButton" destination="pwD-n5-tAY" id="7mM-Eb-MYf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
