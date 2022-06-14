@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106FB06828573E8F00870FC3 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106FB06728573E8F00870FC3 /* CircularProgressView.swift */; };
 		10A6EE4A2856D33000EBADEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EE492856D33000EBADEB /* AppDelegate.swift */; };
 		10A6EE4C2856D33000EBADEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EE4B2856D33000EBADEB /* SceneDelegate.swift */; };
 		10A6EE512856D33000EBADEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A6EE4F2856D33000EBADEB /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106FB06728573E8F00870FC3 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		10A6EE462856D33000EBADEB /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A6EE492856D33000EBADEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A6EE4B2856D33000EBADEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				10A6EE4B2856D33000EBADEB /* SceneDelegate.swift */,
 				10A6EE5D2856E7D800EBADEB /* TabBarControllerMain.swift */,
 				10A6EE5F2856F1A300EBADEB /* ViewController.swift */,
+				106FB06728573E8F00870FC3 /* CircularProgressView.swift */,
 				10A6EE4F2856D33000EBADEB /* Main.storyboard */,
 				10A6EE522856D33100EBADEB /* Assets.xcassets */,
 				10A6EE542856D33100EBADEB /* LaunchScreen.storyboard */,
@@ -86,6 +89,8 @@
 			dependencies = (
 			);
 			name = Pomodoro;
+			packageProductDependencies = (
+			);
 			productName = Pomodoro;
 			productReference = 10A6EE462856D33000EBADEB /* Pomodoro.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,8 @@
 				Base,
 			);
 			mainGroup = 10A6EE3D2856D33000EBADEB;
+			packageReferences = (
+			);
 			productRefGroup = 10A6EE472856D33000EBADEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +151,7 @@
 				10A6EE4A2856D33000EBADEB /* AppDelegate.swift in Sources */,
 				10A6EE5E2856E7D800EBADEB /* TabBarControllerMain.swift in Sources */,
 				10A6EE602856F1A300EBADEB /* ViewController.swift in Sources */,
+				106FB06828573E8F00870FC3 /* CircularProgressView.swift in Sources */,
 				10A6EE4C2856D33000EBADEB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

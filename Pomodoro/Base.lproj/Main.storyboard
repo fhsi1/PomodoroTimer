@@ -67,6 +67,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5B-Oy-5o0">
+                                <rect key="frame" x="82" y="303.5" width="250" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="47z-ow-enZ"/>
+                                    <constraint firstAttribute="width" constant="250" id="Cwb-Jx-uAo"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIQ-15-gUi">
                                 <rect key="frame" x="149" y="404.5" width="116.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
@@ -87,15 +95,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="q5B-Oy-5o0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Ia-aY-NjG"/>
                             <constraint firstItem="lIQ-15-gUi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DmG-3w-dZG"/>
                             <constraint firstItem="pwD-n5-tAY" firstAttribute="top" secondItem="lIQ-15-gUi" secondAttribute="bottom" constant="20" id="ana-g3-Pd8"/>
                             <constraint firstItem="lIQ-15-gUi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jQM-b4-Jyq"/>
                             <constraint firstItem="pwD-n5-tAY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sMe-2o-70v"/>
+                            <constraint firstItem="q5B-Oy-5o0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="xzt-KH-1jI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="v6m-AW-pqw"/>
                     <navigationItem key="navigationItem" id="XMT-cR-F8J"/>
                     <connections>
+                        <outlet property="animatedTimeProgressView" destination="q5B-Oy-5o0" id="rZN-Bc-2bE"/>
                         <outlet property="timerLabel" destination="lIQ-15-gUi" id="9Qh-X1-zEU"/>
                         <outlet property="toggleButton" destination="pwD-n5-tAY" id="7mM-Eb-MYf"/>
                     </connections>

@@ -16,17 +16,20 @@ enum TimerStatus {
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var animatedTimeProgressView: UIView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var toggleButton: UIButton!
     
     // default 25 minutes (1500 seconds)
-    var duration = 1500
+    var duration: TimeInterval = 1500
     
     var timerStatus: TimerStatus = .end
     
     var timer: DispatchSourceTimer?
     
     var currentSeconds = 0
+    
+    var circularProgressView: CircularProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,19 +77,36 @@ class ViewController: UIViewController {
         self.timer = nil
     }
     
+    func setUpCircularProgressView() {
+        // set view
+        circularProgressView = CircularProgressView(frame: .zero)
+        circularProgressView.createCircularPath()
+        // align to the center of the screen
+        circularProgressView.center = view.center
+        // call the animation with circularViewDuration
+        // TODO: Synchronize Timer Labels
+        circularProgressView.progressAnimation(duration: self.duration,
+                                               value: Float(self.currentSeconds) / Float(self.duration) + 0.1
+                                                ) // 0.1 - adjust to the end of timeLabel
+        // add this view to the view controller
+        self.view.addSubview(circularProgressView)
+    }
+        
     @IBAction func tapToggleButton(_ sender: UIButton) {
         switch self.timerStatus {
         case .end:
-            self.currentSeconds = self.duration
+            self.currentSeconds = Int(self.duration)
+            self.setUpCircularProgressView()
             self.timerStatus = .start
-            
             self.toggleButton.isSelected = true
             self.startTimer()
         case .start:
+            self.circularProgressView.pauseLayer(layer: circularProgressView.progressLayer)
             self.timerStatus = .pause
             self.toggleButton.isSelected = false
             self.timer?.suspend()
         case .pause:
+            self.circularProgressView.resumeLayer(layer: circularProgressView.progressLayer)
             self.timerStatus = .start
             self.toggleButton.isSelected = true
             self.timer?.resume()
